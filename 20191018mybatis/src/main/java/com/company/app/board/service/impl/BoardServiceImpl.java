@@ -1,6 +1,7 @@
 package com.company.app.board.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,7 +22,7 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public void deleteBoard(BoardVO vo) {
-		
+		boardDAO.deleteBoardList(vo);
 	}
 
 	@Override
@@ -37,6 +38,11 @@ public class BoardServiceImpl implements BoardService {
 	@Override
 	public List<BoardVO> getBoardList(BoardVO vo) {
 		return boardDAO.getBoardList();
+	}
+
+	@Override
+	public List<Map<String, Object>> getBoardMap(BoardVO vo) {
+		return boardDAO.getBoardMap(vo);
 	}
 
 }

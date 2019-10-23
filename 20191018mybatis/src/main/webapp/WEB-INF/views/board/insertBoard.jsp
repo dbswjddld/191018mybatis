@@ -7,11 +7,11 @@
 	<title>Insert title here</title>
 </head>
 <body>
-	번호 : ${board.seq}<br>
-	제목 : ${board.title} <br>
-	작성자 : ${board.writer} <br>
-	내용 : ${board.content} <br>
-	파일명 : ${board.uploadFilename} <br>
-	작성일자 : ${board.regDate}
+	<form action = "insertBoard">
+		제목 <input name = "title">
+		작성자 <input name = "writer">
+		내용 <input name = "content">
+		<input type = "submit" value = "등록">
+	</form>
 </body>
 </html>
